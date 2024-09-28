@@ -4,28 +4,29 @@ OWASP Nettacker
 [![Apache License](https://img.shields.io/badge/License-Apache%20v2-green.svg)](https://github.com/OWASP/Nettacker/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/badge/Twitter-@iotscan-blue.svg)](https://twitter.com/iotscan)
 ![GitHub contributors](https://img.shields.io/github/contributors/OWASP/Nettacker)
+[![Documentation Status](https://readthedocs.org/projects/nettacker/badge/?version=latest)](https://nettacker.readthedocs.io/en/latest/?badge=latest)
 [![repo size ](https://img.shields.io/github/repo-size/OWASP/Nettacker)](https://github.com/OWASP/Nettacker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/owasp/nettacker)](https://hub.docker.com/r/owasp/nettacker)
 
 
-<img src="https://raw.githubusercontent.com/OWASP/Nettacker/master/web/static/img/owasp-nettacker.png" width="200"><img src="https://raw.githubusercontent.com/OWASP/Nettacker/master/web/static/img/owasp.png" width="500">
+<img src="https://raw.githubusercontent.com/OWASP/Nettacker/master/nettacker/web/static/img/owasp-nettacker.png" width="200"><img src="https://raw.githubusercontent.com/OWASP/Nettacker/master/nettacker/web/static/img/owasp.png" width="500">
 
 
 **DISCLAIMER**
 
-* ***THIS SOFTWARE WAS CREATED FOR AUTOMATED PENETRATION TESTING AND INFORMATION GATHERING. CONTRIBUTORS WILL NOT BE RESPONSIBLE FOR ANY ILLEGAL USAGE.***
+* ***THIS SOFTWARE WAS CREATED FOR AUTOMATED PENETRATION TESTING AND INFORMATION GATHERING. YOU MUST USE THIS SOFTWARE IN A RESPONSIBLE AND ETHICAL MANNER. DO NOT TARGET SYSTEMS OR APPLICATIONS WITHOUT OBTAINING PERMISSIONS OR CONSENT FROM THE SYSTEM OWNERS OR ADMINISTRATORS. CONTRIBUTORS WILL NOT BE RESPONSIBLE FOR ANY ILLEGAL USAGE.***
 
 ![2018-01-19_0-45-07](https://user-images.githubusercontent.com/7676267/35123376-283d5a3e-fcb7-11e7-9b1c-92b78ed4fecc.gif)
 
-OWASP Nettacker project is created to automate information gathering, vulnerability scanning and eventually generating a report for networks, including services, bugs, vulnerabilities, misconfigurations, and other information. This software **will** utilize TCP SYN, ACK, ICMP, and many other protocols in order to detect and bypass Firewall/IDS/IPS devices. By leveraging a unique method in OWASP Nettacker for discovering protected services and devices such as SCADA. It would make a competitive edge compared to other scanner making it one of the bests.
+OWASP Nettacker project is created to automate information gathering, vulnerability scanning and eventually generating a report for networks, including services, bugs, vulnerabilities, misconfigurations, and other information. This software **will** utilize TCP SYN, ACK, ICMP, and many other protocols in order to detect and bypass Firewall/IDS/IPS devices. By leveraging a unique method in OWASP Nettacker for discovering protected services and devices such as SCADA. It would make a competitive edge compared to other scanners making it one of the best.
 
 
 * OWASP Page: https://owasp.org/www-project-nettacker/
 * Wiki: https://github.com/OWASP/Nettacker/wiki
+* Slack: #project-nettacker on https://owasp.slack.com
 * Installation: https://github.com/OWASP/Nettacker/wiki/Installation
 * Usage: https://github.com/OWASP/Nettacker/wiki/Usage
 * GitHub: https://github.com/OWASP/Nettacker
-* Slack: #project-nettacker on https://owasp.slack.com
-* Mailing List: https://groups.google.com/forum/#!forum/owasp-nettacker
 * Docker Image: https://hub.docker.com/r/owasp/nettacker
 * How to use the Dockerfile: https://github.com/OWASP/Nettacker/wiki/Installation#docker
 * OpenHub: https://www.openhub.net/p/OWASP-Nettacker
@@ -36,8 +37,8 @@ ____________
 Quick Setup & Run
 ============
 ```bash
-$ docker-compose up -d && docker exec -it nettacker_nettacker_1 /bin/bash
-# python nettacker.py -i owasp.org -s -m port_scan
+$ docker-compose up -d && docker exec -it nettacker-nettacker-1 /bin/bash
+# poetry run python nettacker.py -i owasp.org -s -m port_scan
 ```
 * Results are accessible from your (https://localhost:5000) or https://nettacker-api.z3r0d4y.com:5000/ (pointed to your localhost)
 * The local database is `.data/nettacker.db` (sqlite).
